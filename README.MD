@@ -1,4 +1,3 @@
-============================================
 Tutorial to run BERT for Text Classification
 ============================================
 
@@ -49,7 +48,9 @@ Note: To run on a new dataset with name *task_name*, do the following:
 	4. Add *task_name* to the num_labels_task dictionary under main and map it to the number of labels in the task. Note that this number should match with the number of labels returned by get_labels in Step 1.
 	5. Finally, make sure to call the python code with the appropriate *task_name* used in the above steps.
 	6. The appropriate Train-Test-Dev data should be present in the Data Directory specified in the args to the python file. This data should be delimited by  TAB and have three columns namely: ID, Text, Label in that order,
-	
+
+Due to data privacy issues, the files in Data have been corrupted but kept with the same format (to show how data is formatted). The Data is not yet public and hence not made available here. Nevertheless, the code should work for any dataset if the above steps are followed. This Code uses three labels namely ['Q', 'A', 'O'] which stands for Questions, Answers and Others.
+
 For further reading, refer:
 	BERT Paper- https://arxiv.org/abs/1810.04805
 	Estimator- https://github.com/google-research/bert#fine-tuning-with-bert
