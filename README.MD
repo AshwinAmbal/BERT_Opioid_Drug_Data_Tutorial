@@ -41,12 +41,12 @@ To run the tutorial with the given data, simply run `bash Run_BERT_Opioid_tutori
 * *eval_results.txt*- The evaluation results on the test set  
 * *Reqd_Labels.csv*- The predicted and gold standard labels for each sentence  
   
-**Note**: To run on a new dataset with name *task_name*, do the following:  
-* Copy the InputProcessor class and make a new class with name *task_name*_InputProcessor  
-* Change the get_labels function in the *task_name*_InputProcessor class to return a list of all possible labels for the new dataset  
-* Add *task_name* to the processors dictionary under main and map it to *task_name*_InputProcessor  
-* Add *task_name* to the num_labels_task dictionary under main and map it to the number of labels in the task. Note that this number should match with the number of labels returned by get_labels in Step 1.  
-* Finally, make sure to call the python code with the appropriate *task_name* used in the above steps.  
+**Note**: To run on a new dataset with name **task_name**, do the following:  
+* Copy the InputProcessor class and make a new class with name **task_name**_InputProcessor  
+* Change the get_labels function in the **task_name**_InputProcessor class to return a list of all possible labels for the new dataset  
+* Add **task_name** to the processors dictionary under main and map it to **task_name**_InputProcessor  
+* Add **task_name** to the num_labels_task dictionary under main and map it to the number of labels in the task. Note that this number should match with the number of labels returned by get_labels in Step 2.  
+* Finally, make sure to call the python code with the appropriate **task_name** used in the above steps.  
 * The appropriate Train-Test-Dev data should be present in the Data Directory specified in the args to the python file. This data should be delimited by  TAB and have three columns namely: ID, Text, Label in that order.  
 
 Due to data privacy issues, the files in Data have been corrupted but kept with the same format (to show how data is formatted). The Data is not yet public and hence not made available here. Nevertheless, the code should work for any dataset if the above steps are followed. This Code uses three labels for the data namely ['Q', 'A', 'O'] which stands for Questions, Answers and Others.  
